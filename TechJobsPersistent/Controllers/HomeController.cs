@@ -38,11 +38,6 @@ namespace TechJobsPersistent.Controllers
 
             return View(addJobViewModel);
         }
-        public IActionResult ProcessAddJobForm()
-        {
-            return View();
-        }
-
        
         public IActionResult ProcessAddJobForm(AddJobViewModel addJobViewModel, string[] selectedSkills)
         {
@@ -75,7 +70,7 @@ namespace TechJobsPersistent.Controllers
                 return Redirect("Index");
             }
 
-            return View("Add", addJobViewModel);
+            return View("AddJob", addJobViewModel);
 
         }
 

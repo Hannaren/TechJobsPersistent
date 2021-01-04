@@ -21,7 +21,7 @@ namespace TechJobsPersistent.ViewModels
         public AddJobViewModel(List<Employer> employers, List<Skill> skills) : this()
         {
             EmployerList = new List<SelectListItem>();
-            SkillList = skills;
+         //   SkillList = skills;
 
             foreach (Employer employer in employers)
             {
@@ -31,6 +31,12 @@ namespace TechJobsPersistent.ViewModels
                     Text = employer.Name
                 });
             }
+            SkillList = skills;
+
+            /* having issues with this error when clicking Add Job button System.NullReferenceException: 'Object reference not set to an instance of an object.'
+
+            TechJobsPersistent.ViewModels.AddJobViewModel.SkillList.get returned null. */
         }
+
     }
 }
